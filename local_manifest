@@ -1,37 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="t25" fetch="https://github.com/TelegramAt25" />
-  <remote name="LOS" fetch="https://github.com/LineageOS" />
-  <remote name="ImSurajxD" fetch="https://gitlab.com/ImSurajxD" />
+  <remote name="user" fetch="https://github.com/xvnrir" />
+  <remote name="alpha" fetch="https://github.com/AlphaDroid-Project" />
 
   <!-- /* device specific */ -->
 
   <!-- device -->
-  <project path="device/xiaomi/selene" name="android_device_xiaomi_selene.git" remote="t25" revision="arrow-13.1" clone-depth="1" />
+  <project path="device/realme/RMX1971" name="device_realme_RMX1971-A13.git" remote="user" revision="thirteen" clone-depth="1" />
 
   <!-- vendor -->
-  <project path="vendor/xiaomi/selene" name="android_vendor_xiaomi_selene.git" remote="t25" revision="thirteen" clone-depth="1" />
+  <project path="vendor/realme/RMX1971" name="vendor_lineage.git" remote="user" revision="AlphaDroid-Project-1.10" clone-depth="1" />
 
   <!-- kernel -->
-  <project path="kernel/xiaomi/selene" name="android_kernel_xiaomi_selene.git" remote="t25" revision="thirteen-stable" clone-depth="1" />
+  <project path="kernel/realme/RMX1971" name="kernel_realme_RMX1971.git" remote="user" revision="thirteen-stable" clone-depth="1" />
 
-  <!-- hack - remove ArrowOS's mtk specific repo and favor LineageOS's instead
-       LineageOS's repo are generally more up to date -->
-  <remove-project name="android_device_mediatek_sepolicy_vndr"/>
-  <remove-project name="android_hardware_mediatek"/>
+  <!-- /* common qcom */ -->
 
-  <!-- /* common mtk */ -->
+  <!-- devicecommon -->
+  <project path="device/realm/sdm710-common" name="device_realme_sdm710-common_A13.git" remote="user" revision="thirteen" clone-depth="1" />
 
-  <!-- hardware -->
-  <project path="hardware/mediatek" name="android_hardware_mediatek.git" remote="LOS" revision="lineage-20" clone-depth="1" />
-
-  <!-- sepolicy -->
-  <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr.git" remote="LOS" revision="lineage-20" clone-depth="1" />
-
-  <!-- /* rombuilders stuff */ -->
-
-  <!-- clang -->
-  <project path="prebuilts/clang/host/linux-x86/clang-r450784d" name="clang-r450784d" remote="ImSurajxD" revision="master" clone-depth="1" />
+  <!-- vendorcommon-->
+  <project path="vendor/realme/sdm710-common" name="android_vendor_realme_sdm710-common.git" remote="user" revision="AlphaDroid-Project-1.10" clone-depth="1" />
 
 </manifest>
